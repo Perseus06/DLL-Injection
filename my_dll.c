@@ -9,12 +9,12 @@ gcc -s -shared -o my_dll.dll my_dll.o -Wl,--subsystem,windows
 Description:
 File that contains the code for a simple DLL (dynamic linked library for windows OS.
 When this DLL will be loaded by a process, a message box will pop on the screen.
-When process loads a DLL it is considered DLL_PROCESS_ATTACH, and therefore all the code that is under that section will be runned by any process that load this DLL.
+When process loads a DLL it is considered DLL_PROCESS_ATTACH, and therefore all the code that is under that section will be executed by any process that load this DLL.
 */
 
 #include <windows.h>
 
-// this function contains all the code that will be runned by every process that loads this DLL.
+// this function contains all the code that will be executed by every process that loads this DLL.
 // in this case, a message box will pop up.
 void DLLCode()
 {
